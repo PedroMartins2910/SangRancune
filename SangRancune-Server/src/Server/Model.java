@@ -24,7 +24,10 @@ public class Model {
 	
 	public void AddUser(UserNewAccount user, String secretKey) 
 	{
-		
+		ResultSet rs;
+		String password = AES.encrypt(user.getPassword(), secretKey);
+		String query = "INSERT INTO table (login, password, email) VALUES ('"+user.getLogin()+"', '"+password+"', '"+user.getEmail()+"')";
+		rs = bddConnection(query);
 	}
 	
 	

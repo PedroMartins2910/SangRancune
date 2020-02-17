@@ -15,7 +15,7 @@ private String login;
 private Server server;
 private Socket socket;
 private ObjectInputStream in;
-private ObjectOutputStream out;
+private ObjectOutputStream out; 
 
 
 public ConnectedClient(Server server, Socket socket) {
